@@ -1,6 +1,5 @@
 package com.example.animals.model
 
-import android.telephony.cdma.CdmaCellLocation
 import com.google.gson.annotations.SerializedName
 
 data class ApiKey(

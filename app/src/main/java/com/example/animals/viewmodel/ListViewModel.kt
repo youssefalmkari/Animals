@@ -46,7 +46,7 @@ class ListViewModel(application: Application) : AndroidViewModel(application) {
             apiService.getApiKey()
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(object : DisposableSingleObserver<ApiKey>() {
+                .subscribeWith(object: DisposableSingleObserver<ApiKey>() {
 
                     override fun onSuccess(key: ApiKey) {
                         if (key.key.isNullOrEmpty()) {

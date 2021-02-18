@@ -15,8 +15,7 @@ import com.bumptech.glide.request.transition.Transition
 import com.example.animals.R
 import com.example.animals.databinding.FragmentDetailBinding
 import com.example.animals.model.Animal
-import com.example.animals.util.getProgressDrawable
-import com.example.animals.util.loadImage
+import com.example.animals.model.AnimalPalette
 
 class DetailFragment : Fragment() {
 
@@ -54,7 +53,7 @@ class DetailFragment : Fragment() {
                     Palette.from(resource)
                         .generate() { palette ->
                             val intColor = palette?.lightMutedSwatch?.rgb ?: 0
-                            dataBinding.animalLayout.setBackgroundColor(intColor)
+                            dataBinding.palette = AnimalPalette(intColor)
                         }
                 }
 

@@ -1,6 +1,5 @@
 package com.example.animals.di
 
-import android.app.Activity
 import android.app.Application
 import androidx.appcompat.app.AppCompatActivity
 import com.example.animals.util.SharedPreferencesHelper
@@ -10,12 +9,12 @@ import javax.inject.Qualifier
 import javax.inject.Singleton
 
 @Module
-class PrefsModule {
+open class PrefsModule {
 
     @Provides
     @Singleton
     @TypeOfContext(CONTEXT_APP)
-    fun provideSharedPreferences(app: Application): SharedPreferencesHelper {
+    open fun provideSharedPreferences(app: Application): SharedPreferencesHelper {
         return SharedPreferencesHelper(app)
     }
 
